@@ -8,3 +8,8 @@ html {
     font-size: 62.5%; // 1 rem = 10px
     box-sizing: border-box;
 }
+
+::selection {
+    background-color: var(--color-blue-dark);
+    // background-color: red;
+}

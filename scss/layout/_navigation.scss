@@ -1,0 +1,55 @@
+.navigation {
+    top: 4rem;
+    left: 5rem;
+    width: 5rem;
+    height: 2.6rem;
+    position: fixed;
+
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+
+    &__button {
+        $nav-button-width: 5rem;
+        $nav-button-height: .2rem;
+
+        position: relative;
+
+        width: $nav-button-width;
+        height: $nav-button-height;
+        background-image: var(--purple-orange-gradient);
+
+
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            width: $nav-button-width;
+            height: $nav-button-height;
+            background-image: var(--purple-orange-gradient);
+            transition: transform .2s;
+        }
+
+        &::before {
+            transform: translateY(-1rem);
+        }
+
+        &::after {
+            transform: translateY(1rem);
+        }
+    }
+
+    &:hover &__button {
+        width: 0;
+
+        &::before {
+            transform: translateY(0rem) rotateZ(135deg);
+        }
+
+        &::after {
+            transform: translateY(0rem) rotateZ(-135deg);
+        }
+
+    }
+
+}

@@ -1,3 +1,13 @@
+:root {
+  --color-blue-light: #E1FDFF;
+  --color-blue-medium: #7DF7FF;
+  --color-blue-dark: #00D1FF;
+  --color-purple-medium: #7018FF;
+  --color-orange-light: #FF7A00;
+  --color-orange-medium: #FF5C00;
+  --color-background-grey: #181818;
+  --purple-orange-gradient: linear-gradient(to right, var(--color-purple-medium) 10%, var(--color-orange-medium) 90%); }
+
 * {
   margin: 0;
   padding: 0;
@@ -7,9 +17,154 @@ html {
   font-size: 62.5%;
   box-sizing: border-box; }
 
+::selection {
+  background-color: var(--color-blue-dark); }
+
 body {
   font-size: 1.6rem;
   font-family: "Roboto", sans-serif; }
 
 .heading {
   font-family: "Work Sans"; }
+
+.heading-primary {
+  text-transform: uppercase;
+  line-height: 82.8%;
+  font-size: 14.4rem;
+  font-weight: 700;
+  text-align: left;
+  color: transparent;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  background-image: var(--purple-orange-gradient); }
+
+@keyframes icon-bounce {
+  0% {
+    transform: translateY(0); }
+  50% {
+    transform: translateY(2rem); }
+  100% {
+    transform: translateY(0); } }
+
+.btn:link, .btn:visited {
+  background-image: var(--purple-orange-gradient);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 100rem;
+  padding: 2rem 3rem;
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  text-align: center;
+  font-weight: 300;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  transition: all .2s; }
+
+.btn:hover {
+  transform: translateY(-1.5rem);
+  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.1); }
+
+.btn:active {
+  transform: translateY(-0.75rem);
+  box-shadow: 0 1.25rem 2.5rem rgba(0, 0, 0, 0.15); }
+
+.icon {
+  width: 3rem;
+  height: 3rem;
+  fill: #fff; }
+
+.navigation {
+  top: 4rem;
+  left: 5rem;
+  width: 5rem;
+  height: 2.6rem;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  cursor: pointer; }
+  .navigation__button {
+    position: relative;
+    width: 5rem;
+    height: 0.2rem;
+    background-image: var(--purple-orange-gradient); }
+    .navigation__button::before, .navigation__button::after {
+      content: '';
+      position: absolute;
+      width: 5rem;
+      height: 0.2rem;
+      background-image: var(--purple-orange-gradient);
+      transition: transform .2s; }
+    .navigation__button::before {
+      transform: translateY(-1rem); }
+    .navigation__button::after {
+      transform: translateY(1rem); }
+  .navigation:hover .navigation__button {
+    width: 0; }
+    .navigation:hover .navigation__button::before {
+      transform: translateY(0rem) rotateZ(135deg); }
+    .navigation:hover .navigation__button::after {
+      transform: translateY(0rem) rotateZ(-135deg); }
+
+.section-hero {
+  height: 100vh;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent), radial-gradient(transparent, #000), url("../img/waterfall-dark.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; }
+  .section-hero__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 71rem; }
+  .section-hero__heading {
+    display: flex;
+    margin-bottom: 7rem; }
+  .section-hero__text {
+    color: #fff;
+    text-align: center; }
+    .section-hero__text--1 {
+      text-transform: uppercase;
+      letter-spacing: 4%;
+      font-size: 4.7rem;
+      width: 36rem;
+      margin-bottom: 2rem;
+      font-weight: 300; }
+    .section-hero__text--2 {
+      line-height: 105.3%;
+      font-size: 2.6rem;
+      width: 40rem;
+      margin-bottom: 8rem;
+      font-weight: 200; }
+  .section-hero__btn {
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+    position: relative; }
+    .section-hero__btn::before {
+      content: '';
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 700;
+      text-transform: uppercase;
+      width: 100%;
+      height: 100%;
+      background-image: var(--purple-orange-gradient);
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 100rem;
+      z-index: -1;
+      opacity: 1;
+      transition: all .3s; }
+    .section-hero__btn:hover {
+      box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.3);
+      transform: translateY(-1rem) scale(1.07); }
+  .section-hero__icon {
+    position: absolute;
+    bottom: 5rem;
+    fill: #AAA;
+    animation: icon-bounce ease-in-out 1.5s infinite; }

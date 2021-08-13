@@ -6,7 +6,11 @@
   --color-orange-light: #FF7A00;
   --color-orange-medium: #FF5C00;
   --color-background-grey: #181818;
-  --purple-orange-gradient: linear-gradient(to right, var(--color-purple-medium) 10%, var(--color-orange-medium) 90%); }
+  --purple-orange-gradient: linear-gradient(to right, var(--color-purple-medium) 10%, var(--color-orange-medium) 90%);
+  --purple-orange-gradient-top: linear-gradient(to top, var(--color-purple-medium) 10%, var(--color-orange-medium) 90%);
+  --purple-orange-gradient-left: linear-gradient(to left, var(--color-purple-medium) 10%, var(--color-orange-medium) 90%);
+  --purple-orange-gradient-bottom: linear-gradient(to bottom, var(--color-purple-medium) 10%, var(--color-orange-medium) 90%);
+  --purple-orange-gradient-bottom-right: linear-gradient(to bottom right, var(--color-purple-medium) 10%, var(--color-orange-medium) 90%); }
 
 * {
   margin: 0;
@@ -22,7 +26,8 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: "Roboto", sans-serif; }
+  font-family: "Roboto", sans-serif;
+  font-weight: 300; }
 
 .heading {
   font-family: "Work Sans"; }
@@ -142,6 +147,35 @@ body {
     margin-left: .75rem;
     max-width: 67rem; }
 
+.inspiration-box-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex: 0 0 100%; }
+
+.inspiration-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  width: 35rem;
+  height: 35rem;
+  padding: 4rem;
+  border-radius: .4rem;
+  box-shadow: -1.2rem 1.2rem 0 0 rgba(0, 0, 0, 0.14); }
+  .inspiration-box__icon {
+    fill: var(--color-blue-dark);
+    width: 10rem;
+    height: 10rem; }
+  .inspiration-box__text {
+    font-size: 2rem;
+    line-height: 154.3%;
+    text-align: center; }
+    .inspiration-box__text--shift-up {
+      margin-bottom: 2.5rem; }
+
 .navigation {
   top: 4rem;
   left: 5rem;
@@ -242,3 +276,26 @@ body {
 
 .section-testimonials {
   margin: 15rem auto; }
+
+.section-inspiration {
+  margin: 30rem auto;
+  padding: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; }
+  .section-inspiration::before, .section-inspiration::after {
+    content: '';
+    transform-origin: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1; }
+  .section-inspiration::before {
+    background-color: var(--color-blue-medium);
+    transform: skewY(-2.5deg); }
+  .section-inspiration::after {
+    background-image: var(--purple-orange-gradient-bottom-right);
+    transform: skewY(-6deg); }

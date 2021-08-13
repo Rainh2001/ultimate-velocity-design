@@ -12,4 +12,8 @@
 
 
     --purple-orange-gradient: linear-gradient(to right, var(--color-purple-medium) 10%, var(--color-orange-medium) 90%);
+    --purple-orange-gradient-top: linear-gradient(to top, var(--color-purple-medium) 10%, var(--color-orange-medium) 90%);
+    --purple-orange-gradient-left: linear-gradient(to left, var(--color-purple-medium) 10%, var(--color-orange-medium) 90%);
+    --purple-orange-gradient-bottom: linear-gradient(to bottom, var(--color-purple-medium) 10%, var(--color-orange-medium) 90%);
+    --purple-orange-gradient-bottom-right: linear-gradient(to bottom right, var(--color-purple-medium) 10%, var(--color-orange-medium) 90%);
 }

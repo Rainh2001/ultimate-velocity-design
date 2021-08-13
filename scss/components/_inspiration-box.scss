@@ -1,0 +1,40 @@
+.inspiration-box-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex: 0 0 100%;
+}
+
+.inspiration-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+
+    width: 35rem;
+    height: 35rem;
+
+    padding: 4rem;
+
+    border-radius: .4rem;
+    box-shadow: -1.2rem 1.2rem 0 0 rgba(0,0,0, .14);
+
+    &__icon {
+        fill: var(--color-blue-dark);
+        width: 10rem;
+        height: 10rem;
+    }
+
+    &__text {
+        font-size: 2rem;
+        line-height: 154.3%;
+        text-align: center;
+
+        &--shift-up {
+            margin-bottom: 2.5rem;
+        }
+    }
+
+}

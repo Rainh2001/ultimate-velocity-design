@@ -40,7 +40,7 @@
     }
 
     &__img-container {
-        max-width: 60rem;
+        max-width: 50rem;
         height: 35rem;
         border-radius: 6rem;
         backface-visibility: hidden;
@@ -50,6 +50,7 @@
         flex: 0 0 45%;
         margin: 0 2rem;
         position: relative;
+        box-shadow: 0 1rem 2rem rgba(0,0,0, .3);
 
         overflow: hidden;
     }

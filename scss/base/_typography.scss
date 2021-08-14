@@ -21,3 +21,17 @@ body {
     background-clip: text;
     background-image: var(--purple-orange-gradient);
 }
+
+.heading-tertiary {
+    font-weight: 300;
+    line-height: 110.3%;
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-family: "Roboto";
+    
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-image: var(--purple-orange-gradient);
+}

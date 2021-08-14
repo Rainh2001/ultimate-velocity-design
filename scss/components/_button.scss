@@ -15,7 +15,7 @@
         transition: all .2s;
     }
 
-    &:hover {
+    &:hover, &:focus-visible {
         transform: translateY(-1.5rem);
         box-shadow: 0 2rem 3rem rgba(0,0,0, .1);
     }

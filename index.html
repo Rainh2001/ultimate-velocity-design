@@ -14,11 +14,27 @@
 </head>
     <body>
 
-        <header class="section-hero">
+        <nav class="navigation">
 
-            <div class="navigation">
-                <div class="navigation__button"></div>
+            <input checked type="checkbox" name="nav-checkbox" id="navigation__checkbox" class="navigation__checkbox">
+            <label for="navigation__checkbox" class="navigation__label">
+                <div class="navigation__button">
+                    <div class="navigation__hamburger"></div>
+                </div>
+            </label>
+
+            <div class="navigation__content">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#" class="navigation__link">Home</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">About</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Adventures</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Book</a></li>
+                </ul>
             </div>
+            
+        </nav>
+
+        <header class="section-hero">
 
             <div class="section-hero__content">
                 <h1 class="section-hero__heading heading heading-primary">Ultimate Velocity</h1>

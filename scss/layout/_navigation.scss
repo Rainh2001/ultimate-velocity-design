@@ -1,19 +1,70 @@
 .navigation {
-    top: 4rem;
-    right: 5rem;
-    width: 5rem;
-    height: 2.6rem;
-    position: fixed;
-
+    
     display: flex;
     align-items: center;
 
-    cursor: pointer;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 15;
+    width: 100%;
+    background-color: var(--color-background-grey);
+    box-shadow: 0 2rem 4rem rgba(0,0,0, .25);
+
+    &__checkbox {
+        display: none;
+    }
+
+    &__label {
+        position: relative;
+        flex: 0 0 auto;
+    }
+
+    &__checkbox:not(:checked) ~ &__content {
+        height: 0;
+        padding: 0;
+        opacity: 0;
+    }
+
+    &__checkbox:checked ~ &__label > &__button {
+        // position: relative;
+        // top: auto;
+        // right: auto;
+        // margin-right: 5rem;
+
+        // animation: nav-button-hack 0s forwards .2s;
+
+        transform: translate(5rem, -3rem);
+    }
+
+    &__checkbox:checked ~ &__label > &__button > &__hamburger {
+        transform: scale(.6);
+    }
 
     &__button {
+        top: 4.3rem;
+        right: 5rem;
+        width: 5rem;
+        height: 2.6rem;
+        position: fixed;
+
+        display: flex;
+        align-items: center;
+
+        cursor: pointer;
+
+        z-index: 30;
+
+        transition: transform .2s;
+        backface-visibility: hidden;
+    }
+
+    &__hamburger {
+        transition: transform .2s;
         $nav-button-width: 5rem;
         $nav-button-height: .2rem;
 
+        z-index: 20;
         position: relative;
 
         width: $nav-button-width;
@@ -27,7 +78,7 @@
             width: $nav-button-width;
             height: $nav-button-height;
             background-image: var(--purple-orange-gradient);
-            transition: transform .2s;
+            transition: transform .4s;
         }
 
         &::before {
@@ -39,7 +90,7 @@
         }
     }
 
-    &:hover &__button {
+    &__checkbox:checked ~ &__label &__hamburger {
         width: 0;
 
         &::before {
@@ -49,7 +100,42 @@
         &::after {
             transform: translateY(0rem) rotateZ(-135deg);
         }
+    }
+
+    &__content {
+        position: relative;
+        height: 11.3rem;
+        opacity: 1;
+        order: -1;
+        display: flex;
+        align-items: center;
+        flex: 1;
+        transition: all .2s;
+    }
+
+    &__list {
+        list-style: none;
+        display: flex;
+        flex: 1;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    &__item {
 
     }
 
+    &__link {
+        font-weight: 200;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        font-size: 2rem;
+        transition: all .2s;
+
+        &:hover {
+            color: var(--color-blue-medium);
+        }
+    }
 }

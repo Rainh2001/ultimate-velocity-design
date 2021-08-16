@@ -12,3 +12,17 @@
         transform: translateY(0);
     }
 }
+
+// NAVIGATION BUTTON HACK -- NOT USING IT
+@keyframes nav-button-hack {
+    0% {
+        
+    }
+
+    100% {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin-right: 5rem;
+    }
+}

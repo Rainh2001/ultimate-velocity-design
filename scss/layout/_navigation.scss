@@ -35,6 +35,11 @@
         // animation: nav-button-hack 0s forwards .2s;
 
         transform: translate(5rem, -3rem);
+
+        &::before {
+            transform: translate(-50%,-50%) translateX(-1rem);
+            padding: 1.4rem;
+        }
     }
 
     &__checkbox:checked ~ &__label > &__button > &__hamburger {
@@ -48,8 +53,12 @@
         height: 2.6rem;
         position: fixed;
 
+        
+
         display: flex;
         align-items: center;
+
+        // background-color: red;
 
         cursor: pointer;
 
@@ -57,6 +66,21 @@
 
         transition: transform .2s;
         backface-visibility: hidden;
+
+        // &::before {
+        //     content: '';
+        //     top: 50%;
+        //     left: 50%;
+        //     transform: translate(-50%,-50%);
+        //     // background-color: var(--color-blue-light);
+        //     background-color: var(--color-blue-light);
+        //     border-radius: 50%;
+        //     padding: 3rem;
+        //     position: absolute;
+        //     width: 1rem;
+        //     height: 1rem;
+        // }
+
     }
 
     &__hamburger {
@@ -104,7 +128,7 @@
 
     &__content {
         position: relative;
-        height: 11.3rem;
+        padding: 4rem 0;
         opacity: 1;
         order: -1;
         display: flex;
@@ -131,7 +155,7 @@
         text-decoration: none;
         text-transform: uppercase;
 
-        font-size: 2rem;
+        font-size: 2.5rem;
         transition: all .2s;
 
         &:hover {

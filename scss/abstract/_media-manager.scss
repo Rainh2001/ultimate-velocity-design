@@ -1,0 +1,29 @@
+// MEDIA MANAGER
+/*
+
+phone: 600px; 37.5em
+tab-port: 900px; 56.25em
+tab-land: 1200px; 75em
+desktop-large: 1500px; 93.75
+
+*/
+
+$bp-phone: 37.5em;
+$bp-tab-port: 56.25em;
+$bp-tab-land: 75em;
+$bp-desktop-large: 93.75em;
+
+@mixin respond($breakpoint){
+    @if $breakpoint == phone {
+        @media only screen and (max-width: $bp-phone){ @content };
+    }
+    @if $breakpoint == tab-port {
+        @media only screen and (max-width: $bp-tab-port){ @content };
+    }
+    @if $breakpoint == tab-land {
+        @media only screen and (max-width: $bp-tab-land){ @content };
+    }
+    @if $breakpoint == desktop-large {
+        @media only screen and (min-width: $bp-desktop-large){ @content };
+    }
+}

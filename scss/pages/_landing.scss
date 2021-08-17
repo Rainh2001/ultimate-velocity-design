@@ -100,7 +100,7 @@
 .section-inspiration {
     margin: 30rem auto;
     // padding: 10rem;
-    padding: 10rem;
+    padding: 10rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -120,12 +120,21 @@
     &::before {
         background-color: var(--color-blue-medium);
         transform: skewY(-2.5deg);
+
+        @include respond(tab-port){
+            padding: 3.1rem 0;
+            transform: translateY(-3rem) skewY(-6deg);
+        }
     }
 
     &::after {
         background-image: var(--purple-orange-gradient-bottom-right);
         transform: skewY(-6deg);
         box-shadow: 0 1rem 2rem rgba(0,0,0, .2);
+
+        @include respond(tab-port){
+            transform: skewY(-9deg);
+        }
     }
 
 }

@@ -45,8 +45,8 @@
             margin-bottom: 6rem;
         }
 
-        width: 38rem;
-        height: 38rem;
+        width: 45rem;
+        height: 45rem;
         justify-content: flex-start;
     }
 
@@ -67,6 +67,7 @@
 
         @include respond(tab-port){
             margin-top: 3rem;
+            font-size: 2.7rem;
         }
     }
 

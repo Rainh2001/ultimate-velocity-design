@@ -16,11 +16,34 @@
         
         box-shadow: 0 .5rem 1rem rgba(0,0,0, .1);
 
-        padding: 1rem 1.75rem;
+        padding: 1.25rem 2rem;
         padding-bottom: 1.2rem;
+
+        font-size: 2rem;
+
+        @include respond(tab-land){
+            font-size: 2.5rem;
+        }
+
+        @include respond(tab-port){
+            font-size: 2.9rem;
+            padding: 1.5rem 2.25rem;
+        }
+
+        &::placeholder {
+            font-weight: 300;
+        }
 
         &:not(:last-of-type) {
             margin-bottom: 2.3rem;
+
+            @include respond(tab-land){
+                margin-bottom: 2.6rem;
+            }
+
+            @include respond(tab-port){
+                margin-bottom: 2.9rem;
+            }
         }
 
         &:focus, &:invalid {
@@ -38,5 +61,17 @@
 
     & .btn {
         margin-top: 5rem;
+
+        &:link, &:visited {
+            font-size: 2.1rem;
+
+            @include respond(tab-land){
+                font-size: 2.6rem;
+            }
+
+            @include respond(tab-port){
+                font-size: 3.2rem;
+            }
+        }
     }
 }
